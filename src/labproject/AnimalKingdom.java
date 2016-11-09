@@ -9,6 +9,37 @@ public class AnimalKingdom {
  	private int positionX;
  	private int positionY;
  	
+        public static void main(String[] arg)
+        {
+        AnimalKingdom saskForest = new AnimalKingdom();
+        saskForest.initalize();
+        saskForest.iterate();
+         }
+        public void initalize()
+        {
+           // add Tree at position ( x, y)
+           // add Caterpillar at postition (x,y)
+           // add blue jay at position (x,y)
+           // add fox at position at (X,y)
+            
+        }
+        public void iterate()
+        {
+         for (int i=0; i<20; i++) // 20 is # of iteration
+         {
+            // get all the child objects of animal kindom
+            //loop  ; move other object next iteration
+                    // move one object -- canEat and collision called in here
+                    
+                    // grow all 
+                    // check if any object can die
+         }          
+        }
+        public void displayKingdom()
+        {
+           System.out.println(this.getPosX()+ " " + this.getPosY() + " " + this.getAge());
+        }
+        
  	public void setPos(int x ,int y )
  	{
  	}
