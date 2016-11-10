@@ -14,9 +14,19 @@ public class AnimalKingdom {
         AnimalKingdom saskForest = new AnimalKingdom();
         saskForest.initalize();
         saskForest.iterate();
+               
          }
+        AnimalKingdom()
+        {
+        	this.setLifeLimit(20);
+        	this.setPos(1, 1);
+        	
+        }
+        
         public void initalize()
         {
+        	this.setpos(10,10);
+        	
            // add Tree at position ( x, y)
            // add Caterpillar at postition (x,y)
            // add blue jay at position (x,y)
@@ -42,6 +52,8 @@ public class AnimalKingdom {
         
  	public void setPos(int x ,int y )
  	{
+ 		this.positionX=x;
+ 		this.positionY=y;
  	}
  	
  	public int getPosX()
