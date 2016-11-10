@@ -2,7 +2,7 @@ package labproject;
 
 public class AnimalKingdom {
 	
-	private String name;
+	private char name;
  	private int id;
  	private int age;
  	private int lifeLimit;
@@ -25,7 +25,7 @@ public class AnimalKingdom {
         
         public void initalize()
         {
-        	this.setpos(10,10);
+        	this.setPos(10,10);
         	
            // add Tree at position ( x, y)
            // add Caterpillar at postition (x,y)
