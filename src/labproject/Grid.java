@@ -9,7 +9,7 @@ public class Grid {
 	public static void main(String [ ] args){
 		
 	    Grid grid = new Grid();
-		grid.clear();
+		grid.clearGrid();
 		
 	}
 	
@@ -19,7 +19,7 @@ public class Grid {
 	private char[][] the_Grid = new char[gCol][gRow];
 	
 	
-       public void clear(){
+       public void clearGrid(){
 			
 			for ( int i = 0; i < gRow; i++)
 			{
@@ -31,10 +31,13 @@ public class Grid {
 			
 		}
 		
-		public void display(){for ( int j = 0; j < gCol; j++)
+		public void displayGrid(){
+			
+	        for ( int j = 0; j < gCol; j++)
 		{
 			System.out.println('-');
 		}
+			
 		System.out.println();
 
 		for ( int i = 0; i < gRow; i++)
@@ -69,26 +72,19 @@ public class Grid {
 		static boolean isValidPositionForCanvas(
 			int row_pos1, int col_pos1){
 			
-			return 
-					(row_pos1 >= 0) &&
-					(col_pos1 >= 0) &&
-					(row_pos1 < gRow) &&
-					(col_pos1 < gCol);
+			return (row_pos1 >= 0) && (col_pos1 >= 0) &&
+			       (row_pos1 < gRow) && (col_pos1 < gCol);
 			
 		}
 	
 
-		static boolean isValidRideForCanvas(
-			int row_pos1, int col_pos1, 
-			int row_size1, int col_size1){
+		static boolean isValidRideForCanvas( int row_pos1, int col_pos1, 
+						     int row_size1, int col_size1){
 			
-			return 
-					(row_pos1 >= 0) &&
-					(col_pos1 >= 0) &&
-					(row_size1 >= 0) &&
-					(col_size1 >= 0) &&
-					(row_pos1 + row_size1 - 1 < gRow) &&
-					(col_pos1 + col_size1 - 1 < gCol);
+			return (row_pos1 >= 0) && (col_pos1 >= 0) &&
+			       (row_size1 >= 0) && (col_size1 >= 0) &&
+			       (row_pos1 + row_size1 - 1 < gRow) &&
+			       (col_pos1 + col_size1 - 1 < gCol);
 		}
 		
 		
