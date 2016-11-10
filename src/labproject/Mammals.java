@@ -7,4 +7,4 @@ abstract public class Mammals extends Omnivores {
     }
 
 }
-
+ 

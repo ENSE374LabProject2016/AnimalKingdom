@@ -9,4 +9,4 @@ public class Rabbit extends Mammals{
         this.setLifeLimit(10);
         
         }
-}
+} 

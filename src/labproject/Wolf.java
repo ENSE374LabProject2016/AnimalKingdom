@@ -9,3 +9,4 @@ public class Wolf extends Mammals{
     }
 
 }
+ 

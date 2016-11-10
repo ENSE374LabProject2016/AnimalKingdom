@@ -8,4 +8,4 @@ public class Mouse extends Mammals {
         this.setLifeLimit(10);
     }
 
-}
+} 

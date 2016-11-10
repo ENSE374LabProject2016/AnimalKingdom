@@ -9,3 +9,4 @@ public class Trees_Shrubs extends Plants {
         this.setLifeLimit(10);
     }
 }
+ 
