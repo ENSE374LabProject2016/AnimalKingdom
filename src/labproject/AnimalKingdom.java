@@ -45,7 +45,7 @@ public class AnimalKingdom {
                     // check if any object can die
          }          
         }
-        public void displayKingdom()
+        public void displayPos()
         {
            System.out.println(this.getPosX()+ " " + this.getPosY() + " " + this.getAge());
         }
