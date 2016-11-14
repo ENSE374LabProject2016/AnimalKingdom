@@ -1,6 +1,6 @@
 package labproject;
 
-public class Deer extends Herbivores{
+public class Deer extends Mammals{
         public Deer()
         {
         name= 'D';
