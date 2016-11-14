@@ -1,6 +1,6 @@
 package labproject;
 
-public class AnimalKingdom {
+public class AnimalKingdom extends Grid{
 	
 	private char name;
  	private int id;
