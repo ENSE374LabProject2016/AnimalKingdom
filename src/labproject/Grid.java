@@ -4,9 +4,9 @@ package lab;
 public class Grid {
 	
 public static void main(String [ ] args){
-		
+	    AnimalKingdom animal = new AnimalKingdom();
 	    Grid grid = new Grid();
-		grid.clearGrid();
+            grid.clearGrid();
 	    grid.displayGrid();
 		
 	}
