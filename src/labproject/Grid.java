@@ -70,7 +70,7 @@ public static void main(String [ ] args){
 		
 		
 		
-		static boolean isValidPositionForCanvas(
+		static boolean isValidPositionForGrid(
 			int row_pos1, int col_pos1){
 			
 			return (row_pos1 >= 0) && (col_pos1 >= 0) &&
@@ -79,7 +79,7 @@ public static void main(String [ ] args){
 		}
 	
 
-		static boolean isValidRideForCanvas( int row_pos1, int col_pos1, 
+		static boolean isValidRideForGrid( int row_pos1, int col_pos1, 
 						     int row_size1, int col_size1){
 			
 			return (row_pos1 >= 0) && (col_pos1 >= 0) &&
