@@ -1,31 +1,32 @@
-package LabProject;
-
-import java.util.*;
-
+package lab;
 
 
 public class Grid {
 	
-	public static void main(String [ ] args){
+public static void main(String [ ] args){
 		
 	    Grid grid = new Grid();
 		grid.clearGrid();
+	    grid.displayGrid();
 		
 	}
 	
-	public static final int gCol = 20;
-	public static final int gRow = 60;
+	public static final int gCol = 30;
+	public static final int gRow = 30;
 	
 	private char[][] the_Grid = new char[gCol][gRow];
 	
 	
        public void clearGrid(){
+    	   
+    	   char d = '.';
 			
 			for ( int i = 0; i < gRow; i++)
 			{
 				for (int j = 0; j < gCol; j++)
 				{
-					the_Grid[i][j] = '.';
+					
+					the_Grid[i][j] = d;
 				}
 			}
 			
@@ -35,7 +36,7 @@ public class Grid {
 			
 	        for ( int j = 0; j < gCol; j++)
 		{
-			System.out.println('-');
+			System.out.print('-');
 		}
 			
 		System.out.println();
@@ -44,14 +45,14 @@ public class Grid {
 		{
 			for ( int j = 0; j < gCol; j++)
 			{
-				System.out.println(the_Grid[i][j]);
+				System.out.print(the_Grid[i][j]);
 			}
 			System.out.println();
 		}
 
 		for (int j = 0; j < gCol; j++)
 		{
-			System.out.println('-');
+			System.out.print('-');
 		}
 		System.out.println();
 		
