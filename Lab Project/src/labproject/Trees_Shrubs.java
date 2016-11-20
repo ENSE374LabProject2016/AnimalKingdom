@@ -5,14 +5,14 @@ public class Trees_Shrubs extends Plants {
     Trees_Shrubs()
     {
      name= 'T';
-        this.setPos(10,10,'T');
+        this.setPost(10,1);
         this.setLifeLimit(10);
     }
 
 	@Override
 	public char getName() {
 		// TODO Auto-generated method stub
-		return 0;
+		return name;
 	}
 
 	@Override

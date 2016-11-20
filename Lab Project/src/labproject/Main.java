@@ -6,23 +6,32 @@ public class Main {
 		
 		Grid g = new Grid();
 		g.clearGrid();
-		Wolf mywolf = new Wolf();
-	
-
-		g.addAnimal(mywolf.getPostX(),mywolf.getPostY(),'W');
-	
-		System.out.println(mywolf.getPostX() + " "+mywolf.getPostY());
-
-		mywolf.move();
-		g.addAnimal(mywolf.getPostX(),mywolf.getPostY(),'W');
-		g.displayGrid();
-		System.out.println(mywolf.getPostX() + " "+mywolf.getPostY());
-		mywolf.move();
-		g.displayGrid();
-	
-		Wolf w = new Wolf();
-		Rabbit r = new Rabbit();
 		
+		
+		//create instance of object of animal here
+		Wolf mywolf = new Wolf();
+		Rabbit myrabbit = new Rabbit();
+		Grass mygrass1= new Grass();
+		Trees_Shrubs myTree = new Trees_Shrubs();
+
+		//add the animal to the grid here
+		g.addAnimal(mywolf.getPostX(),mywolf.getPostY(),mywolf.getName());
+		g.addAnimal(myrabbit.getPostX(),myrabbit.getPostY(),myrabbit.getName());
+		g.addAnimal(mygrass1.getPostX(),mygrass1.getPostY(),mygrass1.getName());
+		g.addAnimal(myTree.getPostX(),myTree.getPostY(),myTree.getName());
+		
+		
+		// add code here to see animals position and age
+		mywolf.displayPos();
+		mygrass1.displayPos();
+		myrabbit.displayPos();
+		myTree.displayPos();
+		
+		
+		// displays the grid
+	g.displayGrid();
+
+/*		
 		if (r.canBeAteBy(w)) {
 			System.out.println("rabbit can be ate by a wolf");
 		} 
@@ -30,7 +39,7 @@ public class Main {
 		if (!w.canBeAteBy(r)) {
 			System.out.println("wold cannot be ate by a rabbit");
 		}
-		
+*/		
 	}
 
 }

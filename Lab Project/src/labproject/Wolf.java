@@ -5,11 +5,12 @@ public class Wolf extends Mammals {
 		name = 'W';
 		this.setPost(10, 10);
 		this.setLifeLimit(40);
+		
 	}
 	
 	  public void move()
 	    {
-	        this.setPost(1,2) ;
+	        this.setPost(getPostX()+4,getPostY()+2) ;
 	    }
 
 

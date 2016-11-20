@@ -9,6 +9,6 @@ abstract public class Insects extends Herbivores {
     
     public void move()
     {
-        this.setPos(this.getPosX()+1,this.getPosY()+1,'I');
+        this.setPos(this.getPostX()+1,this.getPostY()+1,'I');
     }
 }

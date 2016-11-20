@@ -4,15 +4,15 @@ public class Grass extends Plants {
 
     public Grass()
         {
-        name= 'D';
-        this.setPos(1,20,'G');
+        name= 'G';
+        this.setPost(1,15);
         this.setLifeLimit(40);
         }
 
 	@Override
 	public char getName() {
 		// TODO Auto-generated method stub
-		return 0;
+		return name;
 	}
 
 	@Override

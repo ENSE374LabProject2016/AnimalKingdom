@@ -49,7 +49,7 @@ public abstract class AnimalKingdom extends Grid implements Eatable {
         }
         public void displayPos()
         {
-           System.out.println(this.getPosX()+ " " + this.getPosY() + " " + this.getAge());
+           System.out.println(this.name+ " "+this.getPostX()+ " " + this.getPostY() + " " + this.getAge());
         }
         
  	
@@ -91,6 +91,7 @@ public abstract class AnimalKingdom extends Grid implements Eatable {
 	{
 		this.name= a;
 	}
+	//use diplayPos to get both x and y
 	public int getPostX()
 	{
 		return x ;
