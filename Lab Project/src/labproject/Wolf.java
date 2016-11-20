@@ -3,13 +3,13 @@ package labproject;
 public class Wolf extends Mammals {
 	Wolf() {
 		name = 'W';
-		this.setPos(10, 10, 'W');
+		this.setPost(10, 10);
 		this.setLifeLimit(40);
 	}
 	
 	  public void move()
 	    {
-	        this.setPos(1,2, 'W') ;
+	        this.setPost(1,2) ;
 	    }
 
 

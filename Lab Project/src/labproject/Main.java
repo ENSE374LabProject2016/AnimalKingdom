@@ -3,25 +3,23 @@ package labproject;
 public class Main {
 
 	public static void main(String[] args) {
-		//AnimalKingdom saskForest = new AnimalKingdom();
+		
 		Grid g = new Grid();
-	//	g.displayGrid();
-		Wolf mywolf = new Wolf();
 		g.clearGrid();
-		g.addAnimal(mywolf.getPosX(),mywolf.getPosY(),'W');
+		Wolf mywolf = new Wolf();
 	
-		System.out.println(mywolf.getPosX() + " "+mywolf.getPosY());
+
+		g.addAnimal(mywolf.getPostX(),mywolf.getPostY(),'W');
+	
+		System.out.println(mywolf.getPostX() + " "+mywolf.getPostY());
 
 		mywolf.move();
+		g.addAnimal(mywolf.getPostX(),mywolf.getPostY(),'W');
 		g.displayGrid();
-		System.out.println(mywolf.getPosX() + " "+mywolf.getPosY());
-	//	mywolf.move();
-	//	g.displayGrid();
-		
-		//saskForest.initalize();
-		//saskForest.iterate();
-		
-		
+		System.out.println(mywolf.getPostX() + " "+mywolf.getPostY());
+		mywolf.move();
+		g.displayGrid();
+	
 		Wolf w = new Wolf();
 		Rabbit r = new Rabbit();
 		

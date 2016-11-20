@@ -8,14 +8,7 @@ public class Grid {
 	public static final int gRow = 30;
 	public  char[][] the_Grid =new char[gCol][gRow];
  	
-//public static void main(String [ ] args){
-	    //AnimalKingdom animal = new AnimalKingdom();
-//	    Grid grid = new Grid();
-//        grid.clearGrid();
-//	    grid.displayGrid();
-		
-//	}
-	   public void clearGrid()
+public void clearGrid()
 	   {
     	    char d = '.';
 			for ( int i = 0; i < gRow; i++)
@@ -84,13 +77,10 @@ public class Grid {
 			       (row_pos1 + row_size1 - 1 < gRow) &&
 			       (col_pos1 + col_size1 - 1 < gCol);
 		}
+		public void setPos(int a , int b, char w)
+		{
+			
+		}
 		
-		public void setPos(int x ,int y ,char a)
-	 	{
-			
-			
-			
-	 		
-	 	}
 
 }

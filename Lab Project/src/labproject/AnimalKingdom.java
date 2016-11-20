@@ -91,15 +91,20 @@ public abstract class AnimalKingdom extends Grid implements Eatable {
 	{
 		this.name= a;
 	}
-	public int getPosX()
+	public int getPostX()
 	{
 		return x ;
 		
 	}
-	public int getPosY()
+	public int getPostY()
 	{
 		return y;
 	}
-	
+	public void setPost(int xt, int yt)
+	{
+		x= xt;
+		y=yt;
+	}
+
 }
 
