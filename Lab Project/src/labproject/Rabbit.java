@@ -5,7 +5,7 @@ public class Rabbit extends Mammals {
     public Rabbit()
         {
         name= 'R';
-        this.setPos(15,10);
+        this.setPos(15,10,'R');
         this.setLifeLimit(10);
         
         }

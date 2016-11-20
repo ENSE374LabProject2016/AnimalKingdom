@@ -6,8 +6,10 @@ public abstract class AnimalKingdom extends Grid implements Eatable {
  	protected int id;
  	protected int age;
  	protected int lifeLimit;
- 	protected int positionX;
- 	protected int positionY;
+ 	protected int x;
+ 	protected int y;
+ 	
+ 	
  	
 //        public static void main(String[] arg)
 //        {
@@ -19,13 +21,13 @@ public abstract class AnimalKingdom extends Grid implements Eatable {
         AnimalKingdom()
         {
         	this.setLifeLimit(20);
-        	this.setPos(1, 1);
+        	this.setPos(1, 1,'a');
         	
         }
         
         public void initalize()
         {
-        	this.setPos(10,10);
+        	this.setPos(10,10,'a');
         	
            // add Tree at position ( x, y)
            // add Caterpillar at postition (x,y)
@@ -50,21 +52,9 @@ public abstract class AnimalKingdom extends Grid implements Eatable {
            System.out.println(this.getPosX()+ " " + this.getPosY() + " " + this.getAge());
         }
         
- 	public void setPos(int x ,int y )
- 	{
- 		this.positionX=x;
- 		this.positionY=y;
- 	}
  	
- 	public int getPosX()
- 	{
- 		return this.positionX;
- 	}
- 	public int getPosY()
- 	{
- 		return this.positionY;
-
- 	}
+ 	
+ 	
  	
  	
  	public void die()
@@ -100,6 +90,15 @@ public abstract class AnimalKingdom extends Grid implements Eatable {
 	public void setName(char a)
 	{
 		this.name= a;
+	}
+	public int getPosX()
+	{
+		return x ;
+		
+	}
+	public int getPosY()
+	{
+		return y;
 	}
 	
 }

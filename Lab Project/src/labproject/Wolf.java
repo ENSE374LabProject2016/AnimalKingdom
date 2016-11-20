@@ -3,9 +3,15 @@ package labproject;
 public class Wolf extends Mammals {
 	Wolf() {
 		name = 'W';
-		this.setPos(20, 50);
+		this.setPos(10, 10, 'W');
 		this.setLifeLimit(40);
 	}
+	
+	  public void move()
+	    {
+	        this.setPos(1,2, 'W') ;
+	    }
+
 
 	@Override
 	public boolean canBeAteBy(Eatable e) {

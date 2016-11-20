@@ -5,7 +5,7 @@ public class Grass extends Plants {
     public Grass()
         {
         name= 'D';
-        this.setPos(1,20);
+        this.setPos(1,20,'G');
         this.setLifeLimit(40);
         }
 

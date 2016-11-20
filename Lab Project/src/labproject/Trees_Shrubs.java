@@ -5,7 +5,7 @@ public class Trees_Shrubs extends Plants {
     Trees_Shrubs()
     {
      name= 'T';
-        this.setPos(20,40);
+        this.setPos(10,10,'T');
         this.setLifeLimit(10);
     }
 

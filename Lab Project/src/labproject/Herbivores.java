@@ -1,5 +1,7 @@
 package labproject;
 
-abstract public class Herbivores extends AnimalKingdom{
+abstract public class Herbivores extends AnimalKingdom
+{
+	
 
 }

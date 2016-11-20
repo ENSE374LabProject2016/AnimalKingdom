@@ -4,7 +4,7 @@ public class Hawk extends Birds {
     public Hawk()
         {
         name= 'H';
-        this.setPos(5,10);
+        this.setPos(5,10,'H');
         this.setLifeLimit(30);
         }
 

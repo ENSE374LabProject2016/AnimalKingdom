@@ -2,25 +2,22 @@ package labproject;
 
 
 public class Grid {
-	
-public static void main(String [ ] args){
-	    //AnimalKingdom animal = new AnimalKingdom();
-	    Grid grid = new Grid();
-            grid.clearGrid();
-	    grid.displayGrid();
-		
-	}
-	
-	public static final int gCol = 30;
+	public static  int positionX;
+ 	public static int positionY;
+ 	public static final  int gCol = 30;
 	public static final int gRow = 30;
-	
-	private char[][] the_Grid = new char[gCol][gRow];
-	
-	
-       public void clearGrid(){
-    	   
-    	   char d = '.';
-			
+	public  char[][] the_Grid =new char[gCol][gRow];
+ 	
+//public static void main(String [ ] args){
+	    //AnimalKingdom animal = new AnimalKingdom();
+//	    Grid grid = new Grid();
+//        grid.clearGrid();
+//	    grid.displayGrid();
+		
+//	}
+	   public void clearGrid()
+	   {
+    	    char d = '.';
 			for ( int i = 0; i < gRow; i++)
 			{
 				for (int j = 0; j < gCol; j++)
@@ -88,6 +85,12 @@ public static void main(String [ ] args){
 			       (col_pos1 + col_size1 - 1 < gCol);
 		}
 		
-		
+		public void setPos(int x ,int y ,char a)
+	 	{
+			
+			
+			
+	 		
+	 	}
 
 }
