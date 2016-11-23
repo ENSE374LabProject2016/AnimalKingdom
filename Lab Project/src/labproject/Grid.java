@@ -1,12 +1,15 @@
 package labproject;
 
 
+import java.util.*;
+
 public class Grid {
 	public static  int positionX;
  	public static int positionY;
  	public static final  int gCol = 30;
 	public static final int gRow = 30;
 	public  char[][] the_Grid =new char[gCol][gRow];
+	protected static ArrayList<AnimalKingdom> a = new ArrayList<AnimalKingdom>();				/// added to help in iteratiion
  	
 public void clearGrid()
 	   {
@@ -81,6 +84,84 @@ public void clearGrid()
 		{
 			
 		}
+		/* public void move()
+		    {
+		       // this.setPost(getPos()+4,getPos()+2) ;
+		    }
+		*/
 		
+		 public void iterate( )					//moved this from animalKingdom class 
+	        {
+	         for (int i=0; i<20; i++) // 20 is # of iteration
+	         {
+	        		Wolf mywolf = new Wolf();
+	        		Rabbit myrabbit = new Rabbit();
+	        		Grass mygrass1= new Grass();
+	        		Trees_Shrubs myTree = new Trees_Shrubs();
+	        		
+	        	addAnimal(mywolf.getPostX(),mywolf.getPostY(),mywolf.getName());
+	     		addAnimal(myrabbit.getPostX(),myrabbit.getPostY(),myrabbit.getName());
+	     		addAnimal(mygrass1.getPostX(),mygrass1.getPostY(),mygrass1.getName());
+	     		addAnimal(myTree.getPostX(),myTree.getPostY(),myTree.getName());
+	     		
+	     		
+	     		// add code here to see animals position and age
+	     		mywolf.displayPos();
+	     		mygrass1.displayPos();
+	     		myrabbit.displayPos();
+	     		myTree.displayPos();
+	     		
+	     		
+	     		// displays the grid
+	     	displayGrid();
+
+	     	
+	     	clearGrid();
+	     	mywolf.move();
+	     	mygrass1.move();
+	     	myrabbit.move();
+	     	myTree.move();
+	     	
+	     	addAnimal(mywolf.getPostX(),mywolf.getPostY(),mywolf.getName());
+	     	addAnimal(myrabbit.getPostX(),myrabbit.getPostY(),myrabbit.getName());
+	     	addAnimal(mygrass1.getPostX(),mygrass1.getPostY(),mygrass1.getName());
+	     	addAnimal(myTree.getPostX(),myTree.getPostY(),myTree.getName());
+	     	
+	     	mywolf.displayPos();
+	     	mygrass1.displayPos();
+	     	myrabbit.displayPos();
+	     	myTree.displayPos();
+	     	
+	     	displayGrid();
+	        	 
+	        	 
+	        	 // get all the child objects of animal kindom
+	            //loop  ; move other object next iteration
+	                    // move one object -- canEat and collision called in here
+	                    
+	                    // grow all 
+	                    // check if any object can die
+	         }          
+	        }
+		 public void diplayLegend()
+		 {
+			 System.out.println("-----LEGEND-----");
+			 System.out.println("B=Bluejay");
+			 System.out.println("H=Hawk");
+			 System.out.println("G=Grass");
+			 System.out.println("T=Tree");
+			 System.out.println("F=Fox");
+			 System.out.println("D=Deer");
+			 System.out.println("M=Mouse");
+			 System.out.println("S=Squirel");
+			 System.out.println("W=Wolf");
+			 System.out.println("R=Rabbit");
+			 System.out.println("I=Insects");
+			 System.out.println("------------------");
+
+			 
+			 
+			 
+		 }
 
 }

@@ -6,6 +6,10 @@ abstract public class Plants extends AnimalKingdom {
         
         this.setLifeLimit(50); 
     }
+   public void move()
+   {
+	   this.setPost(getPostX(),getPostY()); 
+	  }
     
 
 }

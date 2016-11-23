@@ -35,18 +35,7 @@ public abstract class AnimalKingdom extends Grid implements Eatable {
            // add fox at position at (X,y)
             
         }
-        public void iterate()
-        {
-         for (int i=0; i<20; i++) // 20 is # of iteration
-         {
-            // get all the child objects of animal kindom
-            //loop  ; move other object next iteration
-                    // move one object -- canEat and collision called in here
-                    
-                    // grow all 
-                    // check if any object can die
-         }          
-        }
+       
         public void displayPos()
         {
            System.out.println(this.name+ " "+this.getPostX()+ " " + this.getPostY() + " " + this.getAge());
@@ -59,6 +48,8 @@ public abstract class AnimalKingdom extends Grid implements Eatable {
  	
  	public void die()
  	{
+ 		this.name= '.';
+ 		age=999;
  		
  	}
  	
