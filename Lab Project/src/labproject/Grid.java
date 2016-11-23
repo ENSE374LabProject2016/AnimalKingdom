@@ -72,16 +72,10 @@ public void clearGrid()
 		}
 	
 
-		static boolean isValidRideForGrid( int row_pos1, int col_pos1, 
-						     int row_size1, int col_size1){
-			
-			return (row_pos1 >= 0) && (col_pos1 >= 0) &&
-			       (row_size1 >= 0) && (col_size1 >= 0) &&
-			       (row_pos1 + row_size1 - 1 < gRow) &&
-			       (col_pos1 + col_size1 - 1 < gCol);
-		}
 		public void setPos(int a , int b, char w)
 		{
+			
+			if( w == 
 			
 		}
 		/* public void move()
