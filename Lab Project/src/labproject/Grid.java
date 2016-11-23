@@ -75,7 +75,7 @@ public void clearGrid()
 		public void setPos(int a , int b, char w)
 		{
 			
-			if( w == 
+			
 			
 		}
 		/* public void move()
