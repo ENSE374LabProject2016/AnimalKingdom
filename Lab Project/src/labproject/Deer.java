@@ -16,7 +16,12 @@ public class Deer extends Mammals{
 
 		@Override
 		public boolean canBeAteBy(Eatable e) {
-			// TODO Auto-generated method stub
-			return false;
+			
+			if (e.getName() == 'W') {
+			return true;
+		}
+		
+		
+		return false;
 		}
 }
