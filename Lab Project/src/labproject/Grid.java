@@ -9,7 +9,7 @@ public class Grid {
  	public static final  int gCol = 30;
 	public static final int gRow = 30;
 	public  char[][] the_Grid =new char[gCol][gRow];
-	protected static ArrayList<AnimalKingdom> a = new ArrayList<AnimalKingdom>();				/// added to help in iteratiion
+	//protected static ArrayList<AnimalKingdom> a = new ArrayList<AnimalKingdom>();				/// added to help in iteratiion
  	
 public void clearGrid()
 	   {
