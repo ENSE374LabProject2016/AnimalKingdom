@@ -11,6 +11,7 @@ public class Wolf extends Mammals {
 	  public void move()
 	    {
 	        this.setPost(getPostX()+6,getPostY()+6) ;
+	        grow();
 	    }
 
 

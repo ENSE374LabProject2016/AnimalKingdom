@@ -63,8 +63,8 @@ public void clearGrid()
 		
 		
 		
-		static boolean isValidPositionForGrid(
-			int row_pos1, int col_pos1){
+		static boolean isValidPositionForGrid(int row_pos1, int col_pos1)
+		{
 			
 			return (row_pos1 >= 0) && (col_pos1 >= 0) &&
 			       (row_pos1 < gRow) && (col_pos1 < gCol);
@@ -86,8 +86,10 @@ public void clearGrid()
 		
 		 public void iterate( )					//moved this from animalKingdom class 
 	        {
+			 diplayIntro();
 	         for (int i=0; i<20; i++) // 20 is # of iteration
 	         {
+	        	  /// add animals here 
 	        		Wolf mywolf = new Wolf();
 	        		Rabbit myrabbit = new Rabbit();
 	        		Grass mygrass1= new Grass();
@@ -116,6 +118,12 @@ public void clearGrid()
 	     	myrabbit.move();
 	     	myTree.move();
 	     	
+	     	
+	     	mywolf.move();
+	     	mygrass1.move();
+	     	myrabbit.move();
+	     	myTree.move();
+	     	
 	     	addAnimal(mywolf.getPostX(),mywolf.getPostY(),mywolf.getName());
 	     	addAnimal(myrabbit.getPostX(),myrabbit.getPostY(),myrabbit.getName());
 	     	addAnimal(mygrass1.getPostX(),mygrass1.getPostY(),mygrass1.getName());
@@ -137,12 +145,14 @@ public void clearGrid()
 	                    // check if any object can die
 	         }          
 	        }
-		 public void diplayLegend()
+		 public void displayLegend()
 		 {
 			 System.out.println("-----LEGEND-----");
 			 System.out.println("B=Bluejay");
 			 System.out.println("H=Hawk");
 			 System.out.println("G=Grass");
+			 System.out.println("H=Grasshopper");
+			 System.out.println("C=Caterpillar");
 			 System.out.println("T=Tree");
 			 System.out.println("F=Fox");
 			 System.out.println("D=Deer");
@@ -153,9 +163,17 @@ public void clearGrid()
 			 System.out.println("I=Insects");
 			 System.out.println("------------------");
 
-			 
-			 
-			 
+		 }
+		 public void diplayIntro()
+		 {
+			 String text="Welcome to Saskatchewan Simulation";
+			 String text2="The program will show how animals survive in the wild. Animals are represented by character."
+			 		+"\n" +"When a prey is on the same position as its predator, the prey dies and predator's hunger go down."
+					 +"\n"+"If an animal does eat for long it dies due to hunger";
+			 System.out.println(text+"\n"+text2);
+			 displayLegend();
+			
+			 	
 		 }
 
 }

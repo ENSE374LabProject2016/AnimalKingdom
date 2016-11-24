@@ -1,4 +1,5 @@
 package labproject;
+import java.util.*;
 
 public abstract class AnimalKingdom extends Grid implements Eatable {
 	
@@ -8,6 +9,9 @@ public abstract class AnimalKingdom extends Grid implements Eatable {
  	protected int lifeLimit;
  	protected int x;
  	protected int y;
+ 	protected int hunger;
+ 	private static int hungerLimit=30;
+ 	
  	
  	
  	
@@ -25,7 +29,7 @@ public abstract class AnimalKingdom extends Grid implements Eatable {
         	
         }
         
-        public void initalize()
+        public void initalize()			///this is useless at this point 
         {
         	this.setPos(10,10,'a');
         	
@@ -38,7 +42,7 @@ public abstract class AnimalKingdom extends Grid implements Eatable {
        
         public void displayPos()
         {
-           System.out.println(this.name+ " "+this.getPostX()+ " " + this.getPostY() + " " + this.getAge());
+           System.out.println(this.name+ " "+this.getPostX()+ " " + this.getPostY() + " " + this.getAge()+ " "+getHunger());
         }
         
  	
@@ -49,14 +53,27 @@ public abstract class AnimalKingdom extends Grid implements Eatable {
  	public void die()
  	{
  		this.name= '.';
- 		age=999;
+ 		this.setAge(999);
  		
  	}
  	
- 	public void grow()
+ 	private void setAge(int i) {
+		age=i;
+	}
+
+	public void grow()
  	{
- 		age=age+1;
- 		 		
+ 		
+ 		if (age>getLifeLimit() || this.getHunger()>hungerLimit)
+ 		{
+ 			System.out.println(getName()+"is Dead");
+ 			System.out.println("--------------");
+ 			this.die();
+ 			
+ 		}
+ 		else
+ 			age();
+ 		 
  	}
  	
  	public boolean checkCollision()
@@ -74,9 +91,14 @@ public abstract class AnimalKingdom extends Grid implements Eatable {
 	public void setLifeLimit(int lifeLimit) {
 		this.lifeLimit = lifeLimit;
 	}
+	public void age()
+	{
+		age= getAge()+1;
+		
+	}
 	public int getAge()
 	{
-		return age;
+		return this.age;
 	}
 	public void setName(char a)
 	{
@@ -97,6 +119,13 @@ public abstract class AnimalKingdom extends Grid implements Eatable {
 		x= xt;
 		y=yt;
 	}
-
+	public void setHunger()
+	{
+		hunger=hunger+2;
+	}
+	public int getHunger()
+	{
+		return hunger;
+	}
 }
 

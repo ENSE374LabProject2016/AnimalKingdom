@@ -20,4 +20,8 @@ public class Grass extends Plants {
 		// TODO Auto-generated method stub
 		return false;
 	}
+	public void grow()
+	{
+		
+	}
 }

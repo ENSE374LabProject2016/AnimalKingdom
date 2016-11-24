@@ -8,6 +8,8 @@ public class Main {
 		g.clearGrid();
 		
 		g.iterate();
+		
+		
 		//create instance of object of animal here
 /*		Wolf mywolf = new Wolf();
 		Rabbit myrabbit = new Rabbit();

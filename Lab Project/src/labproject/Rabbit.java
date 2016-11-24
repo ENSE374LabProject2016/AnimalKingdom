@@ -26,13 +26,5 @@ public class Rabbit extends Mammals {
 		return name;
 	}
 
-	@Override
-	public void grow() {
-		// TODO Auto-generated method stub
-//		super.grow();
-		
-	}
-	
-	
 	
 } 
