@@ -17,7 +17,8 @@ public class Wolf extends Mammals {
 	@Override
 	public boolean canBeAteBy(Eatable e) {
 
-		if (e.getName() == 'R') {
+		if (e.getName() == 'R'||e.getName() == 'D'||e.getName() == 'B'||e.getName() == 'G'||e.getName() == 'H'
+		    ||e.getName() == 'M'||e.getName() == 'F'||e.getName() == 'S'||e.getName() == 'T') {
 			return false;
 		}
 
