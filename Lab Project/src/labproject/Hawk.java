@@ -10,13 +10,17 @@ public class Hawk extends Birds {
 
 	@Override
 	public char getName() {
-		// TODO Auto-generated method stub
-		return 0;
+		
+		return name;
 	}
 
 	@Override
 	public boolean canBeAteBy(Eatable e) {
-		// TODO Auto-generated method stub
+		
+		if (e.getName() == 'R'||e.getName() == 'D'||e.getName() == 'B'||e.getName() == 'G'||e.getName() == 'F'||
+		    e.getName() == 'M'||e.getName() == 'W'||e.getName() == 'S'||e.getName() == 'T') {
+			return false;
+		} 
 		return false;
 	}
 
