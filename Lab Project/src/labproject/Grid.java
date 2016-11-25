@@ -4,11 +4,10 @@ package labproject;
 import java.util.*;
 
 public class Grid {
-	public static  int positionX;
- 	public static int positionY;
+	
  	public static final  int gCol = 30;
 	public static final int gRow = 30;
-	public  char[][] the_Grid =new char[gCol][gRow];
+	public static char[][] the_Grid =new char[gCol][gRow];
 	//protected static ArrayList<AnimalKingdom> a = new ArrayList<AnimalKingdom>();				/// added to help in iteratiion
  	
 public void clearGrid()

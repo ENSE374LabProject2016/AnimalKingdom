@@ -29,7 +29,7 @@ public class Main {
 		ani.add(myTree);
 		//Iterator itr=ani.iterator();  
 
-         for (int k=1; k<5;k++){ 
+        
 		for(int i=0; i<ani.size();i++)
         {
 			ani.get(i).age();
@@ -43,7 +43,15 @@ public class Main {
              st.age();
           
     		}*/
-	}}
+        }
+		for(int i=0; i<4;i++)
+		{
+			ani.get(0).displayPos();
+			ani.get(0).move();
+			g.displayGrid();
+			
+		}
+		
 		
 /*		//add the animal to the grid here
 		g.addAnimal(mywolf.getPostX(),mywolf.getPostY(),mywolf.getName());

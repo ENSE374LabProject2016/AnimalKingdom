@@ -129,6 +129,7 @@ public abstract class AnimalKingdom extends Grid implements Eatable {
 	}
 	public void move()
 	{
+		the_Grid[getPostX()][getPostY()] = getName();
 	}	
 }
 
