@@ -17,12 +17,12 @@ public class Deer extends Mammals{
 		}
 		
 		
-		return false;
+			return false;
 		}
 	
 	        @Override
 		public char getName() {
 			return name;
-		}
+}
 
 }

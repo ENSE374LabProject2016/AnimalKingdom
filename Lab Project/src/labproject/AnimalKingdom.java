@@ -127,5 +127,8 @@ public abstract class AnimalKingdom extends Grid implements Eatable {
 	{
 		return hunger;
 	}
+	public void move()
+	{
+	}	
 }
 

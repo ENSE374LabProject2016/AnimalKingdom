@@ -35,8 +35,9 @@ public class Main {
 			ani.get(i).age();
 			ani.get(i).displayPos();
 			g.addAnimal(ani.get(i).getPostX(), ani.get(i).getPostY(), ani.get(i).getName());
+			ani.get(i).move();
 			g.displayGrid();
-    		/*while(itr.hasNext())
+			/*while(itr.hasNext())
     		{  
             AnimalKingdom st=(AnimalKingdom)itr.next();  
              st.age();
