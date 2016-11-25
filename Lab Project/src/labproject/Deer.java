@@ -8,15 +8,21 @@ public class Deer extends Mammals{
         this.setLifeLimit(20);
         }
 
-		@Override
-		public char getName() {
-			// TODO Auto-generated method stub
-			return 0;
-		}
 
 		@Override
 		public boolean canBeAteBy(Eatable e) {
-			// TODO Auto-generated method stub
-			return false;
+			
+			if (e.getName() == 'W') {
+			return true;
 		}
+		
+		
+		return false;
+		}
+	
+	        @Override
+		public char getName() {
+			return name;
+		}
+
 }
