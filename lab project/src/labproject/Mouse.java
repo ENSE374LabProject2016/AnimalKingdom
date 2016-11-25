@@ -4,7 +4,7 @@ public class Mouse extends Mammals {
     Mouse()
     {
         name= 'M';
-        this.setPos(20,20,'M');
+        this.setPost(20,20);
         this.setLifeLimit(10);
     }
 

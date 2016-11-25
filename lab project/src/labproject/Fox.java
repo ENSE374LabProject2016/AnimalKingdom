@@ -4,7 +4,7 @@ public class Fox extends Mammals{
     public Fox()
         {
         name= 'F';
-        this.setPos(10,30,'F');
+        this.setPost(10,30);
         this.setLifeLimit(20);
         }
 

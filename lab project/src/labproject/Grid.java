@@ -4,11 +4,10 @@ package labproject;
 import java.util.*;
 
 public class Grid {
-	public static  int positionX;
- 	public static int positionY;
+	
  	public static final  int gCol = 30;
 	public static final int gRow = 30;
-	public  char[][] the_Grid =new char[gCol][gRow];
+	public static char[][] the_Grid =new char[gCol][gRow];
 	//protected static ArrayList<AnimalKingdom> a = new ArrayList<AnimalKingdom>();				/// added to help in iteratiion
  	
 public void clearGrid()
@@ -72,7 +71,7 @@ public void clearGrid()
 		}
 	
 
-		public void setPos(int a , int b, char w)
+		//public void setPos(int a , int b, char w)
 		{
 			
 			
@@ -148,19 +147,20 @@ public void clearGrid()
 		 public void displayLegend()
 		 {
 			 System.out.println("-----LEGEND-----");
-			 System.out.println("B=Bluejay");
-			 System.out.println("H=Hawk");
-			 System.out.println("G=Grass");
-			 System.out.println("H=Grasshopper");
-			 System.out.println("C=Caterpillar");
-			 System.out.println("T=Tree");
-			 System.out.println("F=Fox");
-			 System.out.println("D=Deer");
-			 System.out.println("M=Mouse");
-			 System.out.println("S=Squirel");
-			 System.out.println("W=Wolf");
-			 System.out.println("R=Rabbit");
-			 System.out.println("I=Insects");
+			 System.out.println("   B=Bluejay");
+			 System.out.println("	C=Caterpillar");
+			 System.out.println("	H=Hawk");
+			 System.out.println("	G=Grass");
+			 System.out.println("	P=Grasshopper");
+			 System.out.println("	C=Caterpillar");
+			 System.out.println("	T=Tree");
+			 System.out.println("	F=Fox");
+			 System.out.println("	D=Deer");
+			 System.out.println("	M=Mouse");
+			 System.out.println("	S=Squirel");
+			 System.out.println("	W=Wolf");
+			 System.out.println("	R=Rabbit");
+			 System.out.println("	I=Insects");
 			 System.out.println("------------------");
 
 		 }
@@ -171,9 +171,24 @@ public void clearGrid()
 			 		+"\n" +"When a prey is on the same position as its predator, the prey dies and predator's hunger go down."
 					 +"\n"+"If an animal does eat for long it dies due to hunger";
 			 System.out.println(text+"\n"+text2);
-			 displayLegend();
-			
-			 	
+			 displayLegend();	
 		 }
-
+		 
+		public void checkDeadAnimal(ArrayList<AnimalKingdom> ani )			/// will be used in iterator() 
+		 {
+			 for(int j=0; j<ani.size();j++)
+		        {
+				int compr=0;
+				compr=ani.get(j).getAge();
+					if (compr==999)
+					{
+					ani.remove(j);
+					the_Grid[ani.get(j).getPostX()][ani.get(j).getPostY()]='.';
+					
+					}
+		        }
+		 }
 }
+
+
+

@@ -4,7 +4,7 @@ public class Squirrel extends Mammals{
     Squirrel()
     {
          name= 'S';
-        this.setPos(20,5,'S');
+        this.setPost(20,5);
         this.setLifeLimit(20);
     }
 

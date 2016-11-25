@@ -5,7 +5,7 @@ public class Bluejay extends Birds{
     Bluejay()
     {
         name= 'B';
-        this.setPos(5,5,name);
+        this.setPost(5,5);
         this.setLifeLimit(30);
         
     }

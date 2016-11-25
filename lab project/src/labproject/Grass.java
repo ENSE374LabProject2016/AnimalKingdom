@@ -7,6 +7,7 @@ public class Grass extends Plants {
         name= 'G';
         this.setPost(1,15);
         this.setLifeLimit(40);
+        this.age=0;
         }
 
 	@Override
@@ -20,8 +21,5 @@ public class Grass extends Plants {
 		// TODO Auto-generated method stub
 		return false;
 	}
-	public void grow()
-	{
-		
-	}
+	
 }

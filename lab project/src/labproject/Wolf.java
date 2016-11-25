@@ -10,7 +10,11 @@ public class Wolf extends Mammals {
 	
 	  public void move()
 	    {
-	        this.setPost(getPostX()+6,getPostY()+6) ;
+		  the_Grid[getPostX()][getPostY()] = '.';
+		  
+		  this.setPost(getPostX()+1,getPostY()+2) ;
+		  the_Grid[getPostX()][getPostY()] = getName();
+		  
 	        grow();
 	    }
 

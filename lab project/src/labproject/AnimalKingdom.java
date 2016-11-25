@@ -25,13 +25,13 @@ public abstract class AnimalKingdom extends Grid implements Eatable {
         AnimalKingdom()
         {
         	this.setLifeLimit(20);
-        	this.setPos(1, 1,'a');
+        	this.setPost(1, 1);
         	
         }
         
         public void initalize()			///this is useless at this point 
         {
-        	this.setPos(10,10,'a');
+        	this.setPost(10,10);
         	
            // add Tree at position ( x, y)
            // add Caterpillar at postition (x,y)
@@ -44,16 +44,14 @@ public abstract class AnimalKingdom extends Grid implements Eatable {
         {
            System.out.println(this.name+ " "+this.getPostX()+ " " + this.getPostY() + " " + this.getAge()+ " "+getHunger());
         }
-        
- 	
- 	
- 	
- 	
- 	
+      
  	public void die()
  	{
- 		this.name= '.';
+ 		
+ 		the_Grid[getPostX()][getPostY()] = '.';
  		this.setAge(999);
+ 		//this.name= '.';
+ 		
  		
  	}
  	
@@ -66,9 +64,13 @@ public abstract class AnimalKingdom extends Grid implements Eatable {
  		
  		if (age>getLifeLimit() || this.getHunger()>hungerLimit)
  		{
- 			System.out.println(getName()+"is Dead");
- 			System.out.println("--------------");
- 			this.die();
+ 			System.out.println(getName()+" is Dead");
+ 			System.out.println("^^^^^^^^");
+ 			if (age>getLifeLimit() )
+ 				System.out.print(" coz it aged");
+ 			if (this.getHunger()>hungerLimit)
+ 				System.out.print(" coz it got too hungry");
+ 		this.die();
  			
  		}
  		else
@@ -129,6 +131,12 @@ public abstract class AnimalKingdom extends Grid implements Eatable {
 	}
 	public void move()
 	{
+		the_Grid[getPostX()][getPostY()] = '.';
+		  
+		  this.setPost(getPostX()+0,getPostY()+0) ;
+		  the_Grid[getPostX()][getPostY()] = getName();
+		  
+	        grow();
 	}	
 }
 
