@@ -6,6 +6,8 @@ public class Mouse extends Mammals {
         name= 'M';
         this.setPost(20,20);
         this.setLifeLimit(10);
+        
+        super.moveStep = 3;
     }
 
 	@Override
@@ -16,8 +18,12 @@ public class Mouse extends Mammals {
 
 	@Override
 	public boolean canBeAteBy(Eatable e) {
-		// TODO Auto-generated method stub
+		if (e.getName() == 'F'|| e.getName() == 'H'){
+			
+			return true;
+		}else {
 		return false;
+	
+		}
 	}
-
 } 

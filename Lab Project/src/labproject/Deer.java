@@ -13,16 +13,20 @@ public class Deer extends Mammals{
 		public boolean canBeAteBy(Eatable e) {
 			
 			if (e.getName() == 'W') {
-			return true;
-		}
+			
+				return true;
 		
+			} else {
 		
 			return false;
+		}
+			
 		}
 	
 	        @Override
 		public char getName() {
 			return name;
 }
+
 
 }

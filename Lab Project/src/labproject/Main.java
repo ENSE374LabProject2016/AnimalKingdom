@@ -7,35 +7,39 @@ public class Main {
 
 	@SuppressWarnings("rawtypes")
 	public static void main(String[] args) {
-		
+
 		Grid g = new Grid();
 		g.clearGrid();
-		
-		ArrayList <AnimalKingdom> ani= new ArrayList<AnimalKingdom>();			/// allows to iterate animal once at a time
-		
-		
-		//g.iterate();
-		
-		
-		//create instance of object of animal here
+
+		ArrayList<AnimalKingdom> ani = new ArrayList<AnimalKingdom>(); /// allows
+																		/// to
+																		/// iterate
+																		/// animal
+																		/// once
+																		/// at a
+																		/// time
+
+		// g.iterate();
+
+		// create instance of object of animal here
 		Wolf mywolf = new Wolf();
 		ani.add(mywolf);
-		
+
 		Rabbit myrabbit = new Rabbit();
 		ani.add(myrabbit);
-		Grass mygrass1= new Grass();
+		Grass mygrass1 = new Grass();
 		ani.add(mygrass1);
 		Trees_Shrubs myTree = new Trees_Shrubs();
 		ani.add(myTree);
-		Bluejay mybluejay =new Bluejay();
+		Bluejay mybluejay = new Bluejay();
 		Caterpiller mycat = new Caterpiller();
 		Deer mydeer = new Deer();
-		Fox myfox=new Fox();
+		Fox myfox = new Fox();
 		Grasshopper myhopper = new Grasshopper();
 		Hawk myhawk = new Hawk();
 		Mouse mymouse = new Mouse();
 		Squirrel mysquirrel = new Squirrel();
-		
+
 		ani.add(mybluejay);
 		ani.add(mycat);
 		ani.add(mydeer);
@@ -44,90 +48,74 @@ public class Main {
 		ani.add(myhawk);
 		ani.add(mymouse);
 		ani.add(mysquirrel);
-		
-	
-		
 
-        
-		for(int i=0; i<ani.size();i++)
-        {
-			//ani.get(i).grow();
-			ani.get(i).displayPos();
-			g.addAnimal(ani.get(i).getPostX(), ani.get(i).getPostY(), ani.get(i).getName());
-			ani.get(i).move();
-			ani.get(2).die();
-			g.displayGrid();		 
-			
-        }
-	/*	for(int i=0; i<4;i++)
-		{
-			ani.get(0).displayPos();
-			ani.get(0).move();
-			g.displayGrid();
-			
-		} 
-		*/
-		ani.get(0).die();
-		for(int j=0; j<ani.size();j++)
-        {
-		int compr=0;
-		compr=ani.get(j).getAge();
-			if (compr==999)
-			{
-			ani.remove(j);
+		for (int o = 0; o < 100; o++) {
+
+			for (int j = 0; j < ani.size() - 1; j++) {
+				for (int k = j + 1; k < ani.size(); k++) {
+					AnimalKingdom a = ani.get(j);
+					AnimalKingdom b = ani.get(k);
+					if (a.checkCollision(b)) {
+						if (a.canBeAteBy(b)) {
+							a.die();
+
+							System.out.println("DEATH ##################");
+						} else if (b.canBeAteBy(a)) {
+							b.die();
+							System.out.println("DEATH ###################");
+						}
+					}
+				}
 			}
-        }
-		
-		System.out.println("Wolf will die now");
-		ani.get(0).displayPos();
-		g.displayGrid();
-		
-		
-/*		//add the animal to the grid here
-		g.addAnimal(mywolf.getPostX(),mywolf.getPostY(),mywolf.getName());
-		g.addAnimal(myrabbit.getPostX(),myrabbit.getPostY(),myrabbit.getName());
-		g.addAnimal(mygrass1.getPostX(),mygrass1.getPostY(),mygrass1.getName());
-		g.addAnimal(myTree.getPostX(),myTree.getPostY(),myTree.getName());
-		
-	
-		// add code here to see animals position and age
-		mywolf.displayPos();
-		mygrass1.displayPos();
-		myrabbit.displayPos();
-		myTree.displayPos();
-*/			
-		
-		// displays the grid
-//	g.displayGrid();
 
-	
-//	g.clearGrid();
-/*	mywolf.move();
-	mygrass1.move();
-	myrabbit.move();
-	myTree.move();
-	
-	g.addAnimal(mywolf.getPostX(),mywolf.getPostY(),mywolf.getName());
-	g.addAnimal(myrabbit.getPostX(),myrabbit.getPostY(),myrabbit.getName());
-	g.addAnimal(mygrass1.getPostX(),mygrass1.getPostY(),mygrass1.getName());
-	g.addAnimal(myTree.getPostX(),myTree.getPostY(),myTree.getName());
-	
-	mywolf.displayPos();
-	mygrass1.displayPos();
-	myrabbit.displayPos();
-	myTree.displayPos();
-	
-	g.displayGrid();   */
+			for (int i = 0; i < ani.size(); i++) {
+				// ani.get(i).grow();
+				//ani.get(i).displayPos();
+				g.addAnimal(ani.get(i).getPostX(), ani.get(i).getPostY(), ani.get(i).getName());
 
-/*		
-		if (r.canBeAteBy(w)) {
-			System.out.println("rabbit can be ate by a wolf");
-		} 
-		
-		if (!w.canBeAteBy(r)) {
-			System.out.println("wold cannot be ate by a rabbit");
+				if (ani.get(i).isTimeToMove()) {
+					ani.get(i).move();
+				}
+
+				// ani.get(i).grow();
+
+				// ani.get(2).die();
+				g.displayGrid();
+			}
+
+			/*
+			 * for(int i=0; i<4;i++) { ani.get(0).displayPos();
+			 * ani.get(0).move(); g.displayGrid();
+			 * 
+			 * }
+			 */
+			// ani.get(0).die();
+			// for (int j = 0; j < ani.size(); j++) {
+			// int compr = 0;
+			// compr = ani.get(j).getAge();
+			// if (compr == 999) {
+			// ani.remove(j);
+			// }
+			// }
+
+			System.out.println("Wolf will die now");
+			ani.get(0).displayPos();
+			g.displayGrid();
+
+			try {
+				Thread.sleep(500);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 		}
-*/		
+
+		/*
+		 * if (r.canBeAteBy(w)) { System.out.println(
+		 * "rabbit can be ate by a wolf"); }
+		 * 
+		 * if (!w.canBeAteBy(r)) { System.out.println(
+		 * "wold cannot be ate by a rabbit"); }
+		 */
 	}
 
 }
