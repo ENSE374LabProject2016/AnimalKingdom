@@ -11,12 +11,23 @@ public class Squirrel extends Mammals{
 	@Override
 	public char getName() {
 		// TODO Auto-generated method stub
-		return 0;
+		return name;
 	}
 
 	@Override
 	public boolean canBeAteBy(Eatable e) {
-		// TODO Auto-generated method stub
+		
+		if (e.getName() == 'D'||e.getName() == 'B'||e.getName() == 'M'||
+				e.getName() == 'G'||e.getName() == 'H'||e.getName() == 'W'||
+			    e.getName() == 'R'||e.getName() == 'T'||
+			    e.getName() == 'C'||e.getName() == 'P') {
+			return false;
+		} 
+		
+		if(e.getName() == 'F' ||e.getName() == 'H'){
+			
+			return true;
+		}
 		return false;
 	}
 } 

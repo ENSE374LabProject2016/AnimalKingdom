@@ -11,7 +11,7 @@ public class Mouse extends Mammals {
 	@Override
 	public char getName() {
 		// TODO Auto-generated method stub
-		return 0;
+		return name;
 	}
 
 	@Override

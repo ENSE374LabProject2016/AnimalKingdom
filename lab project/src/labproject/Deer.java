@@ -4,7 +4,7 @@ public class Deer extends Mammals{
         Deer()
         {
         name= 'D';
-        this.setPost(10,1);
+        this.setPost(17,1);
         this.setLifeLimit(20);
         }
 
