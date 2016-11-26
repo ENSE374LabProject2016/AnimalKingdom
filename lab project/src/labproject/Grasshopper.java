@@ -15,7 +15,7 @@ package labproject;
 	@Override
 	public char getName() {
 		// TODO Auto-generated method stub
-		return name;
+		return 0;
 	}
 
 	@Override

@@ -1,10 +1,11 @@
 package labproject;
 
-public class Mouse extends Mammals {
-    Mouse()
+public class Trees_Shrubs extends Plants {
+
+    Trees_Shrubs()
     {
-        name= 'M';
-        this.setPost(20,20);
+     name= 'T';
+        this.setPost(10,1);
         this.setLifeLimit(10);
     }
 
@@ -19,5 +20,5 @@ public class Mouse extends Mammals {
 		// TODO Auto-generated method stub
 		return false;
 	}
-
-} 
+}
+ 

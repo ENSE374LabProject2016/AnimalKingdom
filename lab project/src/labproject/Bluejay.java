@@ -1,17 +1,19 @@
 package labproject;
 
-public class Mouse extends Mammals {
-    Mouse()
+public class Bluejay extends Birds{
+    
+    Bluejay()
     {
-        name= 'M';
-        this.setPost(20,20);
-        this.setLifeLimit(10);
+        name= 'B';
+        this.setPost(5,5);
+        this.setLifeLimit(30);
+        
     }
 
 	@Override
 	public char getName() {
 		// TODO Auto-generated method stub
-		return name;
+		return 0;
 	}
 
 	@Override
@@ -20,4 +22,5 @@ public class Mouse extends Mammals {
 		return false;
 	}
 
-} 
+	
+}
