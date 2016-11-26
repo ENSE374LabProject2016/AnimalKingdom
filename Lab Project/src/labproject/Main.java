@@ -27,30 +27,60 @@ public class Main {
 		ani.add(mygrass1);
 		Trees_Shrubs myTree = new Trees_Shrubs();
 		ani.add(myTree);
-		//Iterator itr=ani.iterator();  
+		Bluejay mybluejay =new Bluejay();
+		Caterpiller mycat = new Caterpiller();
+		Deer mydeer = new Deer();
+		Fox myfox=new Fox();
+		Grasshopper myhopper = new Grasshopper();
+		Hawk myhawk = new Hawk();
+		Mouse mymouse = new Mouse();
+		Squirrel mysquirrel = new Squirrel();
+		
+		ani.add(mybluejay);
+		ani.add(mycat);
+		ani.add(mydeer);
+		ani.add(myfox);
+		ani.add(myhopper);
+		ani.add(myhawk);
+		ani.add(mymouse);
+		ani.add(mysquirrel);
+		
+	
+		
 
         
 		for(int i=0; i<ani.size();i++)
         {
-			ani.get(i).age();
+			//ani.get(i).grow();
 			ani.get(i).displayPos();
 			g.addAnimal(ani.get(i).getPostX(), ani.get(i).getPostY(), ani.get(i).getName());
 			ani.get(i).move();
-			g.displayGrid();
-			/*while(itr.hasNext())
-    		{  
-            AnimalKingdom st=(AnimalKingdom)itr.next();  
-             st.age();
-          
-    		}*/
+			ani.get(2).die();
+			g.displayGrid();		 
+			
         }
-		for(int i=0; i<4;i++)
+	/*	for(int i=0; i<4;i++)
 		{
 			ani.get(0).displayPos();
 			ani.get(0).move();
 			g.displayGrid();
 			
-		}
+		} 
+		*/
+		ani.get(0).die();
+		for(int j=0; j<ani.size();j++)
+        {
+		int compr=0;
+		compr=ani.get(j).getAge();
+			if (compr==999)
+			{
+			ani.remove(j);
+			}
+        }
+		
+		System.out.println("Wolf will die now");
+		ani.get(0).displayPos();
+		g.displayGrid();
 		
 		
 /*		//add the animal to the grid here

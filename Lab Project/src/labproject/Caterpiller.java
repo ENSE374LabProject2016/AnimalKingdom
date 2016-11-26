@@ -5,17 +5,18 @@ package labproject;
     public Caterpiller()
     {
         name='C';
+        setPost(12,31);
     }
     
     public void move()
     {
-        this.setPos(this.getPostX()+1,this.getPostY()+1,'P');
+        this.setPost(this.getPostX()+1,this.getPostY()-1);
     }
 
 	@Override
 	public char getName() {
 		// TODO Auto-generated method stub
-		return 0;
+		return name;
 	}
 
 	@Override
