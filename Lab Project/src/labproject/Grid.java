@@ -8,8 +8,137 @@ public class Grid {
  	public static final  int gCol = 50;
 	public static final int gRow = 50;
 	public static char[][] the_Grid =new char[gCol][gRow];
-	//protected static ArrayList<AnimalKingdom> a = new ArrayList<AnimalKingdom>();				/// added to help in iteratiion
- 	
+	public static List<String> Log = new ArrayList<String>();
+
+	 public static void main(String[] arg)
+	 {
+		 Grid g = new Grid();
+			g.clearGrid();
+			g.diplayIntro();
+
+			ArrayList<AnimalKingdom> ani = new ArrayList<AnimalKingdom>(); /// allows
+																			/// to
+																			/// iterate
+																			/// animal
+																			/// once
+																			/// at a
+																			/// time
+
+			// g.iterate();
+	////#####################################################################\\\\\\\\
+			//Manually create and add animals to the list here here\\
+			Wolf mywolf = new Wolf();
+			ani.add(mywolf);
+
+			Rabbit myrabbit = new Rabbit();
+			Rabbit myrabbit1 = new Rabbit();
+			myrabbit1.setPost(2, 2);
+			ani.add(myrabbit);
+			
+			ani.add(myrabbit1);
+			Grass mygrass1 = new Grass();
+			ani.add(mygrass1);
+			Grass mygrass2 = new Grass();
+			mygrass2.setPost(2, 3);
+			ani.add(mygrass2);
+			Trees_Shrubs myTree = new Trees_Shrubs();
+			ani.add(myTree);
+			Bluejay mybluejay = new Bluejay();
+			Caterpiller mycat = new Caterpiller();
+			Deer mydeer = new Deer();
+			Fox myfox = new Fox();
+			Grasshopper myhopper = new Grasshopper();
+			Hawk myhawk = new Hawk();
+			Mouse mymouse = new Mouse();
+			Squirrel mysquirrel = new Squirrel();
+
+			ani.add(mybluejay);
+			ani.add(mycat);
+			ani.add(mydeer);
+			ani.add(myfox);
+			ani.add(myhopper);
+			ani.add(myhawk);
+			ani.add(mymouse);
+			ani.add(mysquirrel);
+		////#####################################################################\\\\\\\\
+
+			for (int o = 0; o < 100; o++) {
+
+				for (int j = 0; j < ani.size() - 1; j++) {
+					for (int k = j + 1; k < ani.size(); k++) {
+						AnimalKingdom a = ani.get(j);
+						AnimalKingdom b = ani.get(k);
+						if (a.checkCollision(b)) {
+							if (a.canBeAteBy(b)) {
+								ani.get(j).die();
+								ani.get(k).noHunger();
+
+								System.out.println("DEATH ##################");
+							} else if (b.canBeAteBy(a)) {
+								ani.get(k).die();
+								ani.get(j).noHunger();
+								System.out.println("DEATH ###################");
+							}
+						}
+					}
+				}
+
+				for (int i = 0; i < ani.size(); i++) {
+					
+					g.addAnimal(ani.get(i).getPostX(), ani.get(i).getPostY(), ani.get(i).getName());
+
+					if (ani.get(i).isTimeToMove()) {
+						ani.get(i).move();
+					}
+
+					ani.get(i).grow();
+					
+					
+					
+					for (int l=0;l<ani.size();l++)
+					{
+					ani.get(l).displayPos();
+					}
+					
+					g.displayGrid();
+				}
+
+			
+				////remove dead bodies of animals from the grid
+			//	g.checkDeadAnimal(ani );	
+				 for (int m = 0; m < ani.size(); m++) {
+				 int compr = 0;
+				compr = ani.get(m).getAge();
+				 if (compr == 999) {
+				ani.remove(m);
+				}
+				 }
+
+			
+				g.displayGrid();
+				
+				for(int m=0;m<Log.size();m++)
+				{
+					System.out.println(Log.get(m));
+				}
+				////slow down the grid display
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+				if (ani.size()==0)
+				{
+					System.out.println("EVEYTHING IS DEAD");
+					System.exit(0);
+				}
+			}
+	 }
+			
+		
+	
+	 
+	 	
 public void clearGrid()
 	   {
     	    char d = '.';
@@ -71,79 +200,7 @@ public void clearGrid()
 		}
 	
 
-		//public void setPos(int a , int b, char w)
-		{
-			
-			
-			
-		}
-		/* public void move()
-		    {
-		       // this.setPost(getPos()+4,getPos()+2) ;
-		    }
-		*/
-		
-		 public void iterate( )					//moved this from animalKingdom class 
-	        {
-			 diplayIntro();
-	         for (int i=0; i<20; i++) // 20 is # of iteration
-	         {
-	        	  /// add animals here 
-	        		Wolf mywolf = new Wolf();
-	        		Rabbit myrabbit = new Rabbit();
-	        		Grass mygrass1= new Grass();
-	        		Trees_Shrubs myTree = new Trees_Shrubs();
-	        		
-	        	addAnimal(mywolf.getPostX(),mywolf.getPostY(),mywolf.getName());
-	     		addAnimal(myrabbit.getPostX(),myrabbit.getPostY(),myrabbit.getName());
-	     		addAnimal(mygrass1.getPostX(),mygrass1.getPostY(),mygrass1.getName());
-	     		addAnimal(myTree.getPostX(),myTree.getPostY(),myTree.getName());
-	     		
-	     		
-	     		// add code here to see animals position and age
-	     		mywolf.displayPos();
-	     		mygrass1.displayPos();
-	     		myrabbit.displayPos();
-	     		myTree.displayPos();
-	     		
-	     		
-	     		// displays the grid
-	     	displayGrid();
-
-	     	
-	     	clearGrid();
-	     	mywolf.move();
-	     	mygrass1.move();
-	     	myrabbit.move();
-	     	myTree.move();
-	     	
-	     	
-	     	mywolf.move();
-	     	mygrass1.move();
-	     	myrabbit.move();
-	     	myTree.move();
-	     	
-	     	addAnimal(mywolf.getPostX(),mywolf.getPostY(),mywolf.getName());
-	     	addAnimal(myrabbit.getPostX(),myrabbit.getPostY(),myrabbit.getName());
-	     	addAnimal(mygrass1.getPostX(),mygrass1.getPostY(),mygrass1.getName());
-	     	addAnimal(myTree.getPostX(),myTree.getPostY(),myTree.getName());
-	     	
-	     	mywolf.displayPos();
-	     	mygrass1.displayPos();
-	     	myrabbit.displayPos();
-	     	myTree.displayPos();
-	     	
-	     	displayGrid();
-	        	 
-	        	 
-	        	 // get all the child objects of animal kindom
-	            //loop  ; move other object next iteration
-	                    // move one object -- canEat and collision called in here
-	                    
-	                    // grow all 
-	                    // check if any object can die
-	         }          
-	        }
+	
 		 public void displayLegend()
 		 {
 			 System.out.println("-----LEGEND-----");
@@ -160,18 +217,25 @@ public void clearGrid()
 			 System.out.println("	S=Squirel");
 			 System.out.println("	W=Wolf");
 			 System.out.println("	R=Rabbit");
-			 System.out.println("	I=Insects");
+		
 			 System.out.println("------------------");
 
 		 }
 		 public void diplayIntro()
 		 {
-			 String text="Welcome to Saskatchewan Simulation";
-			 String text2="The program will show how animals survive in the wild. Animals are represented by character."
-			 		+"\n" +"When a prey is on the same position as its predator, the prey dies and predator's hunger go down."
-					 +"\n"+"If an animal does eat for long it dies due to hunger";
+			 String text="--Welcome to Saskatchewan Wildlife Simulator--";
+			 String text2="The program will show how animals survive in the wild. Animals are represented by a character."
+			 		+"\n" +"When a prey and predator are on the same position, the prey dies and predator's hunger go down."
+					 +"\n"+"If an animal does not eat for long it dies due to hunger. Animals also die if the reach thier age limit"+"\n"+
+			 		"Animals position and stats are displayed as [ANIMAL_CHAR][XPos][YPos][Age][Hunger]"+"\n"+"**Animals are added manually.";
 			 System.out.println(text+"\n"+text2);
-			 displayLegend();	
+			 displayLegend();
+			 
+			 try {
+					Thread.sleep(9000);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
 		 }
 		 
 		public void checkDeadAnimal(ArrayList<AnimalKingdom> ani )			/// will be used in iterator() 

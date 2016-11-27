@@ -12,14 +12,19 @@ public class Grass extends Plants {
 
 	@Override
 	public char getName() {
-		// TODO Auto-generated method stub
+		
 		return name;
 	}
 
 	@Override
 	public boolean canBeAteBy(Eatable e) {
-		// TODO Auto-generated method stub
+		if (e.getName() == 'P'||e.getName() == 'R'||e.getName() == 'M'||e.getName() == 'D'){
+			
+			return true;
+		} else {
 		return false;
 	}
-	
+		
+	}
+
 }

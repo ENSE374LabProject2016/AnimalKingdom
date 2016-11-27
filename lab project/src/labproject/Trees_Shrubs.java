@@ -5,8 +5,8 @@ public class Trees_Shrubs extends Plants {
     Trees_Shrubs()
     {
      name= 'T';
-        this.setPost(10,1);
-        this.setLifeLimit(10);
+        this.setPost(11,32);
+        this.setLifeLimit(100);
     }
 
 	@Override
@@ -17,7 +17,16 @@ public class Trees_Shrubs extends Plants {
 
 	@Override
 	public boolean canBeAteBy(Eatable e) {
-		// TODO Auto-generated method stub
+		if (e.getName() == 'S'||e.getName() == 'M'||e.getName() == 'B'||e.getName() == 'C'){
+			
+			return true;
+		} else {
+		return false;
+		}
+	}
+
+	@Override
+	public boolean isTimeToMove() {
 		return false;
 	}
 }

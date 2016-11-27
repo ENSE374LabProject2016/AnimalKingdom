@@ -15,13 +15,10 @@ public class Fox extends Mammals{
 
 	@Override
 	public boolean canBeAteBy(Eatable e) {
-		if (e.getName() == 'R'||e.getName() == 'D'||e.getName() == 'B'||e.getName() == 'G'||e.getName() == 'H'||
-		    e.getName() == 'M'||e.getName() == 'W'||e.getName() == 'S'||e.getName() == 'T') {
-			return false;
-		} 
+	
 
 		return false;
 	}
-    
+
 
 }

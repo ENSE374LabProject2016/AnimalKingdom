@@ -6,6 +6,8 @@ public class Hawk extends Birds {
         name= 'H';
         this.setPost(5,10);
         this.setLifeLimit(30);
+        
+        super.moveStep = 1;
         }
 
 	@Override
@@ -17,10 +19,6 @@ public class Hawk extends Birds {
 	@Override
 	public boolean canBeAteBy(Eatable e) {
 		
-		if (e.getName() == 'R'||e.getName() == 'D'||e.getName() == 'B'||e.getName() == 'G'||e.getName() == 'F'||
-		    e.getName() == 'M'||e.getName() == 'W'||e.getName() == 'S'||e.getName() == 'T') {
-			return false;
-		} 
 		return false;
 	}
 
