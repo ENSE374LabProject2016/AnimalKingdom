@@ -11,18 +11,37 @@ public abstract class AnimalKingdom extends Grid implements Eatable, Movable {
 	protected int x;
 	protected int y;
 	protected int hunger;
+<<<<<<< HEAD
 	private static int hungerLimit = 100;
 	protected int moveStep = 3;
 	private int moveCounter = 5;
 
 	
+=======
+	private static int hungerLimit = 30;
+
+	protected int moveStep = 3;
+	private int moveCounter = 5;
+
+	// public static void main(String[] arg)
+	// {
+	//// AnimalKingdom saskForest = new AnimalKingdom();
+	//// saskForest.initalize();
+	//// saskForest.iterate();
+	////
+	// }
+>>>>>>> c616e37c658e7c9ab3b00e2dcc118c1766649285
 	AnimalKingdom() {
 		this.setLifeLimit(20);
 		this.setPost(1, 1);
 
 	}
 
+<<<<<<< HEAD
 	/*public void initalize() /// this is useless at this point
+=======
+	public void initalize() /// this is useless at this point
+>>>>>>> c616e37c658e7c9ab3b00e2dcc118c1766649285
 	{
 		this.setPost(10, 10);
 
@@ -31,7 +50,11 @@ public abstract class AnimalKingdom extends Grid implements Eatable, Movable {
 		// add blue jay at position (x,y)
 		// add fox at position at (X,y)
 
+<<<<<<< HEAD
 	}*/
+=======
+	}
+>>>>>>> c616e37c658e7c9ab3b00e2dcc118c1766649285
 
 	public void displayPos() {
 		System.out.println(
@@ -42,8 +65,12 @@ public abstract class AnimalKingdom extends Grid implements Eatable, Movable {
 
 		the_Grid[getPostX()][getPostY()] = '.';
 		this.setAge(999);
+<<<<<<< HEAD
 		Log.add(getName() + " is Dead");
 		// this.name= '.';
+=======
+		 this.name= '.';
+>>>>>>> c616e37c658e7c9ab3b00e2dcc118c1766649285
 
 	}
 
@@ -54,12 +81,22 @@ public abstract class AnimalKingdom extends Grid implements Eatable, Movable {
 	public void grow() {
 
 		if (age > getLifeLimit() || this.getHunger() > hungerLimit) {
+<<<<<<< HEAD
 			
 			if (age > getLifeLimit())
 				//Log.add(getName()+" coz it aged");
 			if (this.getHunger() > hungerLimit)
 				//Log.add(getName()+" coz it got too hungry");
 				this.die();
+=======
+			System.out.println(getName() + " is Dead");
+			System.out.println("^^^^^^^^");
+			if (age > getLifeLimit())
+				System.out.print(" coz it aged");
+			if (this.getHunger() > hungerLimit)
+				System.out.print(" coz it got too hungry");
+			this.die();
+>>>>>>> c616e37c658e7c9ab3b00e2dcc118c1766649285
 
 		} else
 			age();
@@ -115,9 +152,12 @@ public abstract class AnimalKingdom extends Grid implements Eatable, Movable {
 	public int getHunger() {
 		return hunger;
 	}
+<<<<<<< HEAD
 	public void noHunger() {
 		hunger = 0;
 	}
+=======
+>>>>>>> c616e37c658e7c9ab3b00e2dcc118c1766649285
 
 	@Override
 	public boolean isTimeToMove() {
