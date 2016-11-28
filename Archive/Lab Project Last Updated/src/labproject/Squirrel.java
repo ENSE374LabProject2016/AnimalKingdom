@@ -18,25 +18,10 @@ public class Squirrel extends Mammals{
 
 	@Override
 	public boolean canBeAteBy(Eatable e) {
-<<<<<<< HEAD
 		if (e.getName() == 'F'||e.getName() == 'H'){
 			
 			return true;
 		} else {
-=======
-		
-		if (e.getName() == 'D'||e.getName() == 'B'||e.getName() == 'M'||
-				e.getName() == 'G'||e.getName() == 'H'||e.getName() == 'W'||
-			    e.getName() == 'R'||e.getName() == 'T'||
-			    e.getName() == 'C'||e.getName() == 'P') {
-			return false;
-		} 
-		
-		if(e.getName() == 'F' ||e.getName() == 'H'){
-			
-			return true;
-		}
->>>>>>> c616e37c658e7c9ab3b00e2dcc118c1766649285
 		return false;
 		}
 	}

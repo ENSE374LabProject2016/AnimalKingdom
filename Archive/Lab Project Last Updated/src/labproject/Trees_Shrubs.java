@@ -5,8 +5,8 @@ public class Trees_Shrubs extends Plants {
     Trees_Shrubs()
     {
      name= 'T';
-        this.setPost(11,32);
-        this.setLifeLimit(100);
+        this.setPost(10,13);
+        this.setLifeLimit(10);
     }
 
 	@Override
