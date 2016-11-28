@@ -227,7 +227,7 @@ public void clearGrid()
 			 String text2="The program will show how animals survive in the wild. Animals are represented by a character."
 			 		+"\n" +"When a prey and predator are on the same position, the prey dies and predator's hunger go down."
 					 +"\n"+"If an animal does not eat for long it dies due to hunger. Animals also die if the reach thier age limit"+"\n"+
-			 		"Animals position and stats are displayed as [ANIMAL_CHAR][XPos][YPos][Age][Hunger]"+"\n"+"**Animals are added manually.";
+			 		"Animals position and stats are displayed as [ANIMAL_CHAR][XPos][YPos][Age][Hunger]"+"\n"+"**Animals are added manually in the main.";
 			 System.out.println(text+"\n"+text2);
 			 displayLegend();
 			 
