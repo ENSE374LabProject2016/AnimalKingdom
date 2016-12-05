@@ -1,7 +1,7 @@
 # AnimalKingdom
 This is ENSE 374 Lab Project (Lab4)
 
-Inorder to run the project , clone the repository and use Last Updated Lab Project folder.
+Inorder to run the project , clone the repository and use labproject folder.
 Built using Eclipse IDE. Also a jar file is available.
 
 Group Members:
